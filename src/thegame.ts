@@ -44,7 +44,7 @@ class TheGame {
                 this.menuMode = false;
             }
         } else if (this.endSceneMode) {
-            if (keyCode === ENTER) {
+            if (keyCode == 32) {
                 this.endSceneMode = false;
                 location.reload();
             }
