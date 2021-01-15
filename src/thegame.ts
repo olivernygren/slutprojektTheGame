@@ -40,16 +40,14 @@ class TheGame {
     update() {
         
         if (this.menuMode) {
-            if (keyCode === ENTER) {
+            if (keyIsDown(ENTER)) {
                 this.menuMode = false;
             }
         } else if (this.endSceneMode) {
-            if (keyCode == 32) {
-                this.endSceneMode = false;
-                location.reload();
+            if (keyIsDown(ENTER)) {
+                game = new TheGame();
             }
-        } 
-        else {
+        } else {
             this.player.update();
             this.star.update();
             this.badthing.update();
